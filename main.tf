@@ -25,7 +25,6 @@ data "cloudinit_config" "config" {
     content      = templatefile("${path.module}/config/cloud_init.cfg", {
       hostname   = var.hostname
       fqdn       = "${var.hostname}.${var.domain}"
-      # Esta ruta ahora sí funcionará porque ya creaste el archivo
       public_key = file(pathexpand("~/.ssh/id_ed25519.pub"))
     })
   }
