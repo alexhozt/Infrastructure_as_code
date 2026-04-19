@@ -1,10 +1,10 @@
-# 🚀 Rocky Linux 9 Infrastructure as Code (IaC)
+# Rocky Linux 9 Infrastructure as Code (IaC)
 
 Este proyecto automatiza el despliegue de una infraestructura virtualizada utilizando **Terraform** y el proveedor de **Libvirt**. Está diseñado para ejecutarse en entornos Linux (KVM/QEMU) y utiliza **Cloud-init** para la personalización dinámica de instancias de Rocky Linux 9.
 
 ---
 
-## 📖 Guía de Operación y Configuración
+## Guía de Operación y Configuración
 
 ### 1. Requisitos de Software en el Host
 Para que Terraform pueda interactuar con el hipervisor y procesar las configuraciones, instala las siguientes dependencias en tu Ubuntu:
@@ -31,7 +31,7 @@ El proyecto está configurado para el usuario `alexhozt`. Asegúrate de cumplir 
 
 ---
 
-## 🛠️ Estructura del Código
+## Estructura del Código
 
 - **`main.tf`**: Orquestador principal. Define el volumen base, el disco de la VM (copy-on-write) y los parámetros del dominio.
 - **`variables.tf`**: Centraliza la configuración de hardware (CPU, RAM, Disco).
@@ -41,7 +41,7 @@ El proyecto está configurado para el usuario `alexhozt`. Asegúrate de cumplir 
 
 ---
 
-## 🚀 Despliegue Paso a Paso
+##  Despliegue Paso a Paso
 
 1.  **Inicialización:**
     Descarga los plugins necesarios (Libvirt y Cloud-init).
@@ -63,7 +63,7 @@ El proyecto está configurado para el usuario `alexhozt`. Asegúrate de cumplir 
 
 ---
 
-## 🔑 Acceso y Mantenimiento
+## Acceso y Mantenimiento
 
 Una vez desplegada, la máquina no permite acceso por contraseña por seguridad. Debes usar tu llave privada SSH:
 
